@@ -41,7 +41,7 @@ function App() {
         throw new Error('未找到任何交易记录')
       }
 
-      const analysis = analyzeTransactions(allTransactions)
+      const analysis = await analyzeTransactions(allTransactions)
       setResult(analysis)
       setProgress(100)
     } catch (e: any) {
